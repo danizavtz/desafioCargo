@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Listar from '../views/Listar.vue'
+import Filtrar from '../views/Filtrar.vue'
+import Agrupar from '../views/Agrupar.vue'
 
 Vue.use(VueRouter)
 
@@ -11,13 +14,25 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/listar',
+    name: 'Listar',
+    component: Listar
+  },
+  {
+    path: '/filtrar',
+    name: 'Filtrar',
+    component: Filtrar
+  },
+  {
+    path: '/agrupar',
+    name: 'Agrupar',
+    component: Agrupar
+  },
+  {
+    path: '/sobre',
+    name: 'Sobre',
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
+      return import(/* webpackChunkName: "about" */ '../views/Sobre.vue')
     }
   }
 ]
